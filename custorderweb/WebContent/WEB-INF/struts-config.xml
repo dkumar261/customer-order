@@ -6,14 +6,14 @@
 
 <struts-config>
 	<form-beans>
-		<form-bean name="helloWorldForm" type="com.form.MyForm" />
+		<form-bean name="helloWorldForm" type="com.form.CustomerForm" />
 	</form-beans>
 	<global-forwards>
 		 <forward name="abc" path="dosome"/>
 	</global-forwards>
 
 	<action-mappings>
-		<action input="/index.jsp" path="/helloWorld" type="com.action.HelloWorldAction"
+		<action input="/index.jsp" path="/helloWorld" type="com.action.CustomerAction"
 	name="helloWorldForm" scope="request">
 					
 			<forward name="success" 
@@ -29,5 +29,5 @@
 					 path="/index.jsp" />
 		</action>
 	</action-mappings>
-	<message-resources parameter="abc" />
+	<message-resources parameter="application" />
 </struts-config>
